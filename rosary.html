@@ -4,14 +4,30 @@
     <body style="background-color:lightgrey;"
     <meta charset="utf-8">
     <title>Rosary</title>
-    <script type="text/javascript">
-      function displayDate() {
-        document.getElementByID("showDate").innerHTML = Date();
-      }
-      Date.getDay()
-    </script>
+
   </head>
   <body>
     <h1>Rosary Mysteries for the Day</h1>
+    <br>
+    <div id="container">
+      <h1 id ="day"> </h1>
+      <h2 id ="month_date_year"> </h2>
+      <h2 id ="time"> </h2>
+    </div>
+
+
   </body>
+<script>
+  months = ['January', 'February', 'March', 'April', 'May', 'June',
+      'July', 'August', 'September', 'October', 'November', 'December'];
+
+  days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday',
+      'Thursday', 'Friday', 'Saturday'];
+
+  date_data = new Date()
+  //Get day
+  current_day = date_data.getDay()
+  document.getElementByID('Day').textContent = days[current_day]
+</script>
+
 </html>
