@@ -27,7 +27,13 @@
   date_data = new Date()
   //Get day
   current_day = date_data.getDay()
-  document.getElementByID('Day').textContent = days[current_day]
+  document.getElementById('Day').textContent = days[current_day]
+
+  //Get Month Date Year
+  current_month = date_data.getMonth()
+  current_date = date_data.getDate()
+  current_year = date_data.getFullYear()
+  document.getElementById('month_date_year').textContent = `$(months[current_month]) $[current_date], [current_year]`
 </script>
 
 </html>
